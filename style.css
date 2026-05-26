@@ -124,8 +124,16 @@ footer a {
 }
 
 .gallery-grid img {
-  max-width: 200px;
-  width: 100%;
+  /* Definindo dimensões iguais para todas as imagens da galeria */
+  width: 200px;
+  height: 200px;
+  /* Recorta e centraliza a imagem para manter o padrão visual */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+
   height: auto;
   border-radius: 8px;
 }
