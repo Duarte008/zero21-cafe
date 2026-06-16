@@ -1,41 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
-<meta charset="UTF-8">
-<title>Zero21 café</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero21 Café - App Delivery</title>
+  <style>
+    :root{--preto:#0b0b0b;--preto2:#171717;--branco:#fff;--fundo:#f4f4f5;--texto:#111827;--cinza:#6b7280;--borda:#e5e7eb;--verde:#16a34a;--vermelho:#dc2626;}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--fundo);color:var(--texto)}
+    header{background:var(--preto);color:white;padding:22px 16px;position:sticky;top:0;z-index:10;box-shadow:0 4px 16px rgba(0,0,0,.18)}
+    .top{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-size:26px;font-weight:900}.logo span{color:#fff}.tag{font-size:13px;opacity:.85;margin-top:4px}
+    .cartBtn{background:white;color:#111;border:none;border-radius:999px;padding:12px 16px;font-weight:900;cursor:pointer}.hero{max-width:1100px;margin:18px auto 0;padding:0 16px}.banner{background:linear-gradient(135deg,#111,#27272a);color:white;border-radius:22px;padding:22px;display:grid;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.16)}
+    .banner h1{margin:0;font-size:30px}.banner p{margin:0;color:#e5e7eb}.banner strong{color:white}
+    main{max-width:1100px;margin:18px auto;padding:0 16px 90px}.tabs{display:flex;gap:10px;overflow:auto;padding-bottom:10px;position:sticky;top:94px;background:var(--fundo);z-index:8}.tab{border:1px solid var(--borda);background:white;border-radius:999px;padding:10px 14px;cursor:pointer;white-space:nowrap;font-weight:800}.tab.active{background:#111;color:white;border-color:#111}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:10px}.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(15,23,42,.08);display:flex;flex-direction:column;border:1px solid #eee}.img{height:138px;background:linear-gradient(135deg,#111,#333);display:flex;align-items:center;justify-content:center;font-size:58px}.info{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}.info h3{margin:0;font-size:18px}.desc{font-size:13px;color:var(--cinza);line-height:1.35;min-height:36px}.price{font-size:20px;font-weight:900;color:#111}.add{margin-top:auto;border:none;border-radius:12px;background:#111;color:white;font-weight:900;padding:12px;cursor:pointer}
+    .drawer{position:fixed;right:-420px;top:0;width:100%;max-width:420px;height:100vh;background:white;z-index:30;transition:.25s;box-shadow:-10px 0 28px rgba(0,0,0,.18);display:flex;flex-direction:column}.drawer.open{right:0}.drawerHead{padding:18px;background:#111;color:white;display:flex;justify-content:space-between;align-items:center}.close{border:none;background:rgba(255,255,255,.16);color:white;border-radius:10px;padding:8px 10px;cursor:pointer}.drawerBody{padding:16px;overflow:auto;flex:1}.item{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #eef0f5;padding:12px 0}.qty{display:flex;align-items:center;gap:8px}.qty button{border:none;background:#f3f4f6;color:#111;font-weight:900;border-radius:8px;width:28px;height:28px;cursor:pointer}.total{font-size:22px;font-weight:900;margin:12px 0}.form label{font-size:13px;font-weight:900;margin-top:10px;display:block}.form input,.form textarea,.form select{width:100%;padding:11px;border:1px solid #d1d5db;border-radius:12px;margin-top:6px}.checkout{border:none;background:var(--verde);color:white;border-radius:14px;padding:14px;width:100%;font-weight:900;cursor:pointer;margin-top:12px}.empty{color:var(--cinza);text-align:center;padding:28px 0}.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:20}.overlay.show{display:block}footer{text-align:center;color:var(--cinza);padding:24px}.small{font-size:12px;color:var(--cinza)}
+    @media(max-width:600px){.banner h1{font-size:24px}.top{align-items:flex-start}.drawer{max-width:none}.grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-<header class="hero" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Coffee_cup.jpg/1280px-Coffee_cup.jpg');">
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="menu.html">Cardápio</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
-  <div class="hero-content">
-    <h1>Bem-vindo ao Zero21 café</h1>
-    <p>O melhor café da Mealhada</p>
-  </div>
-</header>
-
-<section class="intro">
-  <h2>Sobre Nós</h2>
-  <p>No Zero21 café, oferecemos uma experiência única com cafés especiais, bolos artesanais e um ambiente acolhedor. Venha relaxar, trabalhar ou encontrar amigos enquanto desfruta das melhores bebidas e petiscos.</p>
-</section>
-
-<section class="intro">
-  <h2>Nosso Menu</h2>
-  <p>Descubra nossa variedade de cafés, chás e deliciosos acompanhamentos. Clique em "Cardápio" no menu acima para ver todos os detalhes.</p>
-</section>
-
-<footer>
-  <div class="info">
-    <p>© 2026 Zero21 café. Todos os direitos reservados.</p>
-    <p>Foto cortesia: <a href="https://commons.wikimedia.org/wiki/File:Coffee_cup.jpg">Egien via Wikimedia Commons</a> (CC BY 2.5).</p>
-  </div>
-</footer>
+  <header><div class="top"><div><div class="logo">Zero21 <span>Café</span></div><div class="tag">Smash burgers • Pizzas • Milkshakes • Delivery & Take-away</div></div><button class="cartBtn" onclick="toggleCart(true)">🛒 Carrinho <span id="cartCount">0</span></button></div></header>
+  <section class="hero"><div class="banner"><h1>Peça direto no <strong>Zero21 Café</strong></h1><p>Escolha entrega ou retirada no local. Finalize pelo WhatsApp com o pedido já montado.</p></div></section>
+  <main><div class="tabs" id="tabs"></div><section class="grid" id="products"></section></main>
+  <div class="overlay" id="overlay" onclick="toggleCart(false)"></div>
+  <aside class="drawer" id="drawer"><div class="drawerHead"><b>Seu pedido</b><button class="close" onclick="toggleCart(false)">Fechar</button></div><div class="drawerBody"><div id="cartItems"></div><div class="total">Total: <span id="total">0,00€</span></div><div class="form"><label>Tipo de pedido</label><select id="tipo"><option>Entrega</option><option>Retirada no local</option></select><label>Nome</label><input id="nome" placeholder="Seu nome" /><label>Telefone</label><input id="telefone" placeholder="Seu telefone" /><label>Morada / Observação</label><textarea id="morada" rows="3" placeholder="Rua, número, zona ou observações"></textarea><label>Pagamento</label><select id="pagamento"><option>MB Way</option><option>Dinheiro</option><option>Cartão</option></select><button class="checkout" onclick="enviarWhatsApp()">Enviar pedido pelo WhatsApp</button><p class="small">WhatsApp configurado: 351937109733</p></div></div></aside>
+  <footer>Zero21 Café © App protótipo</footer>
+<script>
+const WHATSAPP_NUMBER = "351937109733";
+const produtos = [
+  {id:1, categoria:"Smash Burgers", nome:"Smash The Best", preco:11.50, emoji:"🍔", desc:"Carne smash, bacon defumado, catupiry tostado e carne seca."},
+  {id:2, categoria:"Smash Burgers", nome:"Smash Zero21", preco:9.50, emoji:"🍔", desc:"Carne, mozzarella, fiambre, bacon defumado, ovo, alface e tomate."},
+  {id:3, categoria:"Smash Burgers", nome:"Smash Coalho", preco:10.50, emoji:"🍔", desc:"Carne smash, bacon defumado, queijo coalho, mel e rúcula."},
+  {id:4, categoria:"Smash Burgers", nome:"Smash Padano Nobre", preco:9.50, emoji:"🍔", desc:"Carne smash, bacon defumado, ovo e grana padano ralado na hora."},
+  {id:5, categoria:"Smash Burgers", nome:"Bacon Cheddar", preco:7.50, emoji:"🍔", desc:"Carne smash, bacon defumado, cheddar e cebola caramelizada."},
+  {id:6, categoria:"Smash Burgers", nome:"Hambúrguer de Frango com Catupiry", preco:10.50, emoji:"🍗", desc:"Peito de frango panado, queijo catupiry e cebola crispy."},
+  {id:7, categoria:"Entradas", nome:"Batata Zero21", preco:6.50, emoji:"🍟", desc:"Batata com bacon e cheddar."},
+  {id:8, categoria:"Entradas", nome:"Batata Especial Catupiry e Carne Seca", preco:8.00, emoji:"🍟", desc:"Batata com catupiry cremoso e carne seca."},
+  {id:9, categoria:"Entradas", nome:"Nuggets", preco:5.00, emoji:"🍗", desc:"Porção com 10 unidades."},
+  {id:10, categoria:"Entradas", nome:"Tiras de Frango", preco:5.00, emoji:"🍗", desc:"8 tiras crocantes de frango."},
+  {id:11, categoria:"Entradas", nome:"Tiras de Queijo", preco:5.00, emoji:"🧀", desc:"8 tiras de queijo crocantes."},
+  {id:25, categoria:"Entradas", nome:"Coxinha de Frango 10uni", preco:5.00, emoji:"🍗", desc:"Porção com 10 coxinhas de frango."},
+  {id:26, categoria:"Entradas", nome:"Batata Simples", preco:4.00, emoji:"🍟", desc:"Porção de batata frita simples."},
+  {id:27, categoria:"Entradas", nome:"Asinhas de Frango 10uni", preco:9.00, emoji:"🍗", desc:"10 asinhas de frango crocantes."},
+  {id:12, categoria:"Pizzas", nome:"Pizza Margherita", preco:8.50, emoji:"🍕", desc:"Queijo, tomate e manjericão."},
+  {id:13, categoria:"Pizzas", nome:"Pizza Calabresa", preco:13.00, emoji:"🍕", desc:"Calabresa, queijo e cebola."},
+  {id:14, categoria:"Pizzas", nome:"Pizza Pepperoni", preco:10.00, emoji:"🍕", desc:"Pepperoni, queijo e cebola."},
+  {id:15, categoria:"Pizzas", nome:"Pizza 4 Queijos", preco:11.00, emoji:"🍕", desc:"Mozzarella, edam, cheddar e grana padano."},
+  {id:16, categoria:"Pizzas", nome:"Pizza de Atum", preco:9.50, emoji:"🍕", desc:"Queijo, atum, cebola e azeitonas."},
+  {id:17, categoria:"Pizzas", nome:"Pizza Zero21", preco:13.50, emoji:"🍕", desc:"Queijo, mozzarella, fiambre, bacon, calabresa, cebola, milho e azeitona."},
+  {id:18, categoria:"Sobremesas", nome:"Cheesecake com Ganache de Nutella", preco:4.50, emoji:"🍰", desc:"Cheesecake cremoso com ganache de Nutella."},
+  {id:19, categoria:"Milkshakes", nome:"Milkshake Chocolate 500ml", preco:5.00, emoji:"🥤", desc:"Milkshake cremoso de chocolate."},
+  {id:20, categoria:"Milkshakes", nome:"Milkshake Morango 500ml", preco:5.00, emoji:"🥤", desc:"Milkshake cremoso de morango."},
+  {id:21, categoria:"Milkshakes", nome:"Milkshake Pistachio 500ml", preco:5.00, emoji:"🥤", desc:"Milkshake cremoso de pistachio."},
+  {id:22, categoria:"Bebidas", nome:"Coca-Cola 1,5L", preco:3.00, emoji:"🥤", desc:"Refrigerante 1,5L."},
+  {id:23, categoria:"Bebidas", nome:"Água 500ml", preco:1.00, emoji:"💧", desc:"Água mineral."},
+  {id:24, categoria:"Bebidas", nome:"Sumo Natural", preco:2.50, emoji:"🧃", desc:"Graviola, maracujá, manga, goiaba, acerola ou morango."},
+  {id:25, categoria:"Bebidas", nome:"Coca-Cola 330ml", preco:1.60, emoji:"🥤", desc:"Refrigerante lata."},
+  {id:28, categoria:"Bebidas", nome:"Compal Laranja do Algarve", preco:1.50, emoji:"🧃", desc:"Sumo Compal Laranja do Algarve."},
+  {id:29, categoria:"Bebidas", nome:"Compal Manga", preco:1.50, emoji:"🧃", desc:"Sumo Compal sabor manga."},
+  {id:30, categoria:"Bebidas", nome:"Compal Maracujá", preco:1.50, emoji:"🧃", desc:"Sumo Compal sabor maracujá."},
+  {id:31, categoria:"Bebidas", nome:"Ice Tea Limão", preco:1.40, emoji:"🥤", desc:"Ice Tea sabor limão."},
+  {id:32, categoria:"Bebidas", nome:"Ice Tea Pêssego", preco:1.40, emoji:"🥤", desc:"Ice Tea sabor pêssego."},
+  {id:33, categoria:"Bebidas", nome:"Guaraná Antártica", preco:1.50, emoji:"🥤", desc:"Lata/garrafa individual."},
+  {id:34, categoria:"Bebidas", nome:"Fanta Laranja", preco:1.50, emoji:"🥤", desc:"Refrigerante sabor laranja."},
+  {id:35, categoria:"Bebidas", nome:"Sprite", preco:1.50, emoji:"🥤", desc:"Refrigerante limão-lima."},
+  {id:36, categoria:"Bebidas", nome:"Ginger Ale", preco:1.50, emoji:"🥤", desc:"Refrigerante Ginger Ale."},
+  {id:37, categoria:"Bebidas", nome:"Água Tônica", preco:1.50, emoji:"🥤", desc:"Água tônica."},
+  {id:38, categoria:"Bebidas", nome:"Heineken", preco:1.60, emoji:"🍺", desc:"Cerveja Heineken."},
+  {id:39, categoria:"Bebidas", nome:"Heineken Zero", preco:1.60, emoji:"🍺", desc:"Cerveja sem álcool."},
+  {id:40, categoria:"Bebidas", nome:"Água das Pedras", preco:1.30, emoji:"💧", desc:"Água com gás."},
+  {id:41, categoria:"Bebidas", nome:"Água Castelo", preco:1.30, emoji:"💧", desc:"Água com gás."},
+  {id:42, categoria:"Bebidas", nome:"Frize Limão", preco:1.30, emoji:"💧", desc:"Água com gás sabor limão."},
+  {id:43, categoria:"Bebidas", nome:"Frize Groselha", preco:1.30, emoji:"💧", desc:"Água com gás sabor groselha."},
+  {id:44, categoria:"Bebidas", nome:"Ice", preco:2.50, emoji:"🍹", desc:"Bebida Ice."},
+];
+let categoriaAtual = "Todos"; let carrinho = [];
+const euro = v => Number(v).toFixed(2).replace('.', ',') + '€';
+const cats = ["Todos", ...new Set(produtos.map(p => p.categoria))];
+function renderTabs(){document.getElementById('tabs').innerHTML = cats.map(c => `<button class="tab ${c===categoriaAtual?'active':''}" onclick="setCat('${c}')">${c}</button>`).join('');}
+function setCat(c){categoriaAtual=c; renderTabs(); renderProducts();}
+function renderProducts(){const lista = categoriaAtual === "Todos" ? produtos : produtos.filter(p => p.categoria === categoriaAtual);document.getElementById('products').innerHTML = lista.map(p => `<article class="card"><div class="img">${p.emoji}</div><div class="info"><h3>${p.nome}</h3><div class="desc">${p.desc}</div><div class="price">${euro(p.preco)}</div><button class="add" onclick="addCart(${p.id})">Adicionar</button></div></article>`).join('');}
+function addCart(id){const p = produtos.find(x=>x.id===id); const item = carrinho.find(x=>x.id===id); if(item) item.qtd++; else carrinho.push({...p,qtd:1}); renderCart(); toggleCart(true);}
+function changeQty(id,delta){const item = carrinho.find(x=>x.id===id); if(!item) return; item.qtd += delta; if(item.qtd<=0) carrinho = carrinho.filter(x=>x.id!==id); renderCart();}
+function renderCart(){document.getElementById('cartCount').textContent = carrinho.reduce((s,i)=>s+i.qtd,0); if(!carrinho.length){document.getElementById('cartItems').innerHTML='<div class="empty">Seu carrinho está vazio.</div>'; document.getElementById('total').textContent=euro(0); return;} document.getElementById('cartItems').innerHTML = carrinho.map(i=>`<div class="item"><div><b>${i.nome}</b><br><span class="small">${euro(i.preco)} cada</span></div><div class="qty"><button onclick="changeQty(${i.id},-1)">-</button><b>${i.qtd}</b><button onclick="changeQty(${i.id},1)">+</button></div></div>`).join(''); document.getElementById('total').textContent = euro(carrinho.reduce((s,i)=>s+i.preco*i.qtd,0));}
+function toggleCart(open){document.getElementById('drawer').classList.toggle('open',open);document.getElementById('overlay').classList.toggle('show',open);}
+function enviarWhatsApp(){if(!carrinho.length){alert('Adicione produtos ao carrinho.'); return;} const nome=document.getElementById('nome').value||'Cliente'; const telefone=document.getElementById('telefone').value||''; const tipo=document.getElementById('tipo').value; const morada=document.getElementById('morada').value||'Não informado'; const pagamento=document.getElementById('pagamento').value; const total=carrinho.reduce((s,i)=>s+i.preco*i.qtd,0); const itens=carrinho.map(i=>`• ${i.qtd}x ${i.nome} - ${euro(i.preco*i.qtd)}`).join('\n'); const msg=encodeURIComponent(`Olá Zero21 Café! Quero fazer um pedido:\n\n${itens}\n\nTotal: ${euro(total)}\nTipo: ${tipo}\nNome: ${nome}\nTelefone: ${telefone}\nMorada/Obs: ${morada}\nPagamento: ${pagamento}`); window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');}
+renderTabs(); renderProducts(); renderCart();
+</script>
 </body>
 </html>
